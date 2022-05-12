@@ -1,0 +1,13 @@
+--- # software installation
+- name: my playing cards
+  hosts: all
+  user: ansible
+  become: yes
+  connection: ssh
+
+  tasks:
+    - name: installing package into host
+      yum: 
+        name: docker
+        state: present  
+          

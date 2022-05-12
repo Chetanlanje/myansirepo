@@ -1,0 +1,12 @@
+--- # deleting dir 
+- name: my test playbook 
+  hosts: all
+  become: yes
+
+
+  tasks:
+    - name: deleting dir
+      file:
+       path: /home/ansible/haridir
+       state: absent
+

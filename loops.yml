@@ -1,0 +1,14 @@
+--- # my loops software
+- hosts: all
+  user: ansible
+  become: yes 
+  connection: ssh
+
+  tasks:
+    - name: creating multiple users
+      user: name='{{item}}' state=present
+      with_items: 
+           - monika
+           
+    
+

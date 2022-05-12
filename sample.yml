@@ -1,0 +1,8 @@
+--- # my sample playbook
+- name: are you
+  become: yes
+  hosts: all
+
+  tasks:
+    - name: creating a file
+      file: path=/tmp/harry.txt state=touch  

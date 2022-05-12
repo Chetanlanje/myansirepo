@@ -1,0 +1,12 @@
+--- # creating directory
+- name: my play directory
+  hosts: all
+  become: yes
+  user: ansible
+  connection: ssh
+
+  tasks:
+    - name: creating a directory
+      file:
+       path: /home/ansible/haridir
+       state: directory  

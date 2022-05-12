@@ -1,0 +1,17 @@
+--- # dry run
+- name: my test run
+  become: yes
+  connection: ssh
+  hosts: all
+
+  tasks:
+    - name: deleting pkg
+      yum:
+        name: docker
+        state: present 
+
+    - name: stopping service
+      service:
+        name: docker
+        state: restarted
+            

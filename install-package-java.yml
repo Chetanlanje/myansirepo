@@ -1,0 +1,13 @@
+--- # installing software 
+- name: my test lab
+  hosts: all
+  user: ansible
+    # become: yes  
+  connection: ssh
+
+  tasks:
+    - name: install package
+      yum: 
+        name: java
+        state: present  
+

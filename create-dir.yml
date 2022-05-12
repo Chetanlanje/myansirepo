@@ -1,0 +1,9 @@
+--- # creating directory
+- hosts: all
+  become: yes
+
+
+  tasks:
+   - name: creating a directory
+     file: path=/tmp/chgdir state=directory
+
